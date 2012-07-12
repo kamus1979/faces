@@ -43,7 +43,6 @@ public class UserDAO implements IUserDAO {
 	 * 
 	 * @param  User user
 	 */
-	@Override
 	public void addUser(User user) {
 		getSessionFactory().getCurrentSession().save(user);
 	}
@@ -53,7 +52,6 @@ public class UserDAO implements IUserDAO {
 	 * 
 	 * @param  User user
 	 */
-	@Override
 	public void deleteUser(User user) {
 		getSessionFactory().getCurrentSession().delete(user);
 	}
@@ -63,7 +61,6 @@ public class UserDAO implements IUserDAO {
 	 * 
 	 * @param  User user
 	 */
-	@Override
 	public void updateUser(User user) {
 		getSessionFactory().getCurrentSession().update(user);
 	}
