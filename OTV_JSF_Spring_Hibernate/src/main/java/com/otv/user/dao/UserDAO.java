@@ -71,7 +71,6 @@ public class UserDAO implements IUserDAO {
 	 * @param  int User Id
 	 * @return User 
 	 */
-	@Override
 	public User getUserById(int id) {
 		List list = getSessionFactory().getCurrentSession()
 											.createQuery("from User where id=?")
@@ -84,7 +83,6 @@ public class UserDAO implements IUserDAO {
 	 * 
 	 * @return List - User list
 	 */
-	@Override
 	public List<User> getUsers() {
 		List list = getSessionFactory().getCurrentSession().createQuery("from User").list();
 		return list;
