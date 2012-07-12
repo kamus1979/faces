@@ -12,6 +12,7 @@
 
 		<ui:define name="body">
 
+
 			<h:form>
 				<h:panelGrid columns="2">
 					<h:outputText value="Name:" />
@@ -21,11 +22,8 @@
 					<h:outputText value="Count:" />
 					<h:outputText id="count" value="#{bean8.count}" />
 				</h:panelGrid>
-				<!--h:commandButton value="Submit" action="#{bean8.countAction}">
-					<f:ajax event="click" execute="@form" render="echo count" />
-					
-				</h:commandButton-->
-				<a4j:commandButton value="Submit" render="echo count" action="#{bean8.countAction}"/>
+
+				<a4j:commandButton value="Submit" render="echo count" action="#{bean8.contadorAction}"/>
 			</h:form>
 
 		</ui:define>

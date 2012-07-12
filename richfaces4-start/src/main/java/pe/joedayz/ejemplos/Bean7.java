@@ -7,7 +7,6 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class Bean7 {
 
-	
 	private String color;
 
 	public String getColor() {

@@ -22,8 +22,10 @@
 					<h:outputText id="count" value="#{bean8.count}" />
 				</h:panelGrid>
 				<input type="button" value="Submit" onclick="sendAjaxRequest();" />
+				
+				
 				<a4j:jsFunction name="sendAjaxRequest" execute="@form"
-					action="#{bean8.countAction}" render="echo, count" />
+					action="#{bean8.contadorAction}" render="echo, count" />
 			</h:form>
 
 		</ui:define>
