@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script
+END
+ScriptFisico.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/ScriptFisico.txt
+END
+USP_ELIMINAR_EXAMENFISICO.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_ELIMINAR_EXAMENFISICO.txt
+END
+USP_ELIMINAR_JUGADOR.txt
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_ELIMINAR_JUGADOR.txt
+END
+USP_INSERTA_EXAMENFISICO.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_INSERTA_EXAMENFISICO.txt
+END
+TABLE_EXAMEN_MEDICO
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/TABLE_EXAMEN_MEDICO
+END
+USP_ELIMINAR_EXAMEN_MEDICO
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_ELIMINAR_EXAMEN_MEDICO
+END
+USP_INSERTA_JUGADOR.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_INSERTA_JUGADOR.txt
+END
+USP_OBTENER_JUGADORES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_OBTENER_JUGADORES.txt
+END
+USP_INSERTA_EXAMEN_MEDICO
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_INSERTA_EXAMEN_MEDICO
+END
+USP_OBTENER_EXAMENFISICO.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_OBTENER_EXAMENFISICO.txt
+END
+USP_OBTENER_EXAMENES_MEDICOS
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/web/script/USP_OBTENER_EXAMENES_MEDICOS
+END

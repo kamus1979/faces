@@ -1,0 +1,49 @@
+10
+
+dir
+1
+http://upcdew-deportivoapp.googlecode.com/svn/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo
+http://upcdew-deportivoapp.googlecode.com/svn
+
+
+
+2010-04-17T16:05:01.380245Z
+1
+mane_cab@hotmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2a2af6c1-710c-dab9-c589-add3b32bdf93
+
+model
+dir
+
+services
+dir
+
+dao
+dir
+
+controller
+dir
+
+resource
+dir
+
+view
+dir
+
+util
+dir
+

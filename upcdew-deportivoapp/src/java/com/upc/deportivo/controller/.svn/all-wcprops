@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller
+END
+WelcomeServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/WelcomeServlet.java
+END
+MantenimientoPartidoBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/MantenimientoPartidoBean.java
+END
+MantenimientoExamenFisicoBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/MantenimientoExamenFisicoBean.java
+END
+MantenimientoJugadorBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/MantenimientoJugadorBean.java
+END
+AppServletListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/AppServletListener.java
+END
+ReporteResultadoPartidoBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/ReporteResultadoPartidoBean.java
+END
+MantenimientoExamenMedicoBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/MantenimientoExamenMedicoBean.java
+END
+MantenimientoJugadorPartidoBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/1/trunk/%20upcdew-deportivoapp/src/java/com/upc/deportivo/controller/MantenimientoJugadorPartidoBean.java
+END
