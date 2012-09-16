@@ -12,6 +12,10 @@ import javax.servlet.http.HttpSession;
 import java.text.MessageFormat;
 import java.util.*;
 
+/*
+ * @author joe
+ * 
+ */
 public class BasePage {
     protected final Log log = LogFactory.getLog(getClass());
     protected String sortColumn;
