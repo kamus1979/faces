@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * A hotel where users may book stays.
+ * A hotel where users may book stays. Demo SpringSource
  */
 @Entity
 public class Hotel implements Serializable {
