@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import accounts.Role;
 import accounts.internal.dao.RoleDao;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -14,9 +15,13 @@ import java.util.List;
  * @author <a href="mailto:dan@getrolling.com">Dan Kibler</a>
  */
 @Service("roleManager")
-public class RoleManagerImpl implements RoleManager {
+public class RoleManagerImpl implements RoleManager, Serializable {
 	
-    RoleDao roleDao;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 9096611232425612412L;
+	RoleDao roleDao;
 
     @Autowired
     public RoleManagerImpl(RoleDao roleDao) {

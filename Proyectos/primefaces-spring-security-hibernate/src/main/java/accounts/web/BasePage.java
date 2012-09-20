@@ -74,7 +74,7 @@ public class BasePage {
 
     @SuppressWarnings("unchecked")
     protected void addMessage(String key, Object arg) {
-        List<String> messages = (List) getSession().getAttribute("messages");
+        List<String> messages = (List<String>) getSession().getAttribute("messages");
 
         if (messages == null) {
             messages = new ArrayList<String>();
@@ -90,7 +90,7 @@ public class BasePage {
 
     @SuppressWarnings("unchecked")
     protected void addError(String key, Object arg) {
-        List<String> errors = (List) getSession().getAttribute("errors");
+        List<String> errors = (List<String>) getSession().getAttribute("errors");
 
         if (errors == null) {
             errors = new ArrayList<String>();
@@ -161,7 +161,7 @@ public class BasePage {
      * @param list the java.util.List to sort
      * @return ordered list
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     protected List sort(List list) {
         Comparator comparator = new BeanComparator(sortColumn, new NullComparator(nullsAreHigh));
         if (!ascending) {

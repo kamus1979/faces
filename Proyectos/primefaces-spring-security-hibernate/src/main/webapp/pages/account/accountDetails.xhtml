@@ -1,51 +1,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:c="http://java.sun.com/jsp/jstl/core">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 <ui:composition template="/pages/template/template.xhtml">
-<ui:define name="body">
-<f:view>
-	<h:form id="accountForm">
-		<p:panel>
-			<f:facet name="header">
-				<h:outputText value="Account Details" />
-			</f:facet>
-			<h:panelGrid columns="1" title="Account" >
-				
-				<h:outputText value="Account Id: " />
-				<h:outputText value="#{accountForm.account.entityId}" />
-				
-				<h:outputText value="Name: " />
-				<p:inputText id="name" value="#{accountForm.account.name}" 
-						required="true" requiredMessage="Name is required" 
-						validatorMessage="Name should be of lenght from 5 to 10 chars">
-					<f:validateLength minimum="5" maximum="15" for="name"/>
-				</p:inputText>
-				
-				
-				<h:outputText value="Number: " />
-				<p:inputText id="number" value="#{accountForm.account.number}" >
-					<f:validateLength  maximum="10" for="number"/>
-				</p:inputText>
-							
+	<ui:define name="body">
+		<f:view>
 
-				<h:inputHidden value="#{accountForm.account.entityId}" />
-				
-				<h:panelGroup>
-					<p:commandButton value="Update" action="#{accountForm.updateAccount}" id="save" />
-					<c:if test="${not empty accountForm.account.entityId}">
-						<p:commandButton value="Delete" action="#{accountForm.deleteAccount}" id="delete" />					
-					</c:if>
-					<p:commandButton value="Cancel" action="cancel" immediate="true" id="cancel" />
-				</h:panelGroup>					
-			</h:panelGrid>			
-		</p:panel>
-	</h:form>
-</f:view>
-</ui:define>
+
+			<h:form id="form">
+
+				<p:panel id="panel" header="Account Details">
+
+					<p:messages id="msgs" />
+
+					<h:panelGrid columns="1">
+
+
+						<h:outputText value="Account Id: " />
+						<h:outputText value="#{accountForm.account.entityId}" />
+
+						<h:outputLabel value="Name: " for="name" />
+						<p:inputText id="name" value="#{accountForm.account.name}"
+							required="true" label="Name">
+							<f:validateLength minimum="2" />
+						</p:inputText>
+
+
+						<h:outputLabel value="Number: " for="number" />
+						<p:inputText id="number" value="#{accountForm.account.number}"
+							required="true" label="Number">
+							<f:validateLength minimun="2" maximum="9" />
+						</p:inputText>
+
+						<h:inputHidden value="#{accountForm.account.entityId}" />
+
+					</h:panelGrid>
+
+					<p:commandButton id="save" value="Update"
+						action="#{accountForm.updateAccount}"  />
+
+
+					<p:commandButton id="delete" value="Delete"
+						action="#{accountForm.deleteAccount}" />
+
+					<p:commandButton id="cancel" value="Cancel" action="cancel"
+						immediate="true" />
+
+				</p:panel>
+
+			</h:form>
+
+		</f:view>
+	</ui:define>
 </ui:composition>
 </html>

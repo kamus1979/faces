@@ -1,5 +1,8 @@
 package accounts.internal.service;
 
+import java.io.Serializable;
+import java.util.List;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +15,15 @@ import org.springframework.stereotype.Service;
 import accounts.User;
 import accounts.internal.dao.UserDao;
 
-import java.util.List;
-
 
 @Service("userManager")
-public class UserManagerImpl implements UserManager {
+public class UserManagerImpl implements UserManager, Serializable {
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6047548591139511453L;
+
 	protected final Log log = LogFactory.getLog(getClass());
 	
 	@Autowired

@@ -1,10 +1,12 @@
 package accounts.internal.service;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import accounts.Account;
 import accounts.internal.dao.AccountRepository;
@@ -12,8 +14,13 @@ import accounts.internal.dao.AccountRepository;
 import common.money.Percentage;
 
 @Service("accountManager")
-public class AccountManagerImpl implements AccountManager {
+@Transactional
+public class AccountManagerImpl implements AccountManager, Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9184971127194391200L;
 	@Autowired
 	private AccountRepository accountRepository;
 	

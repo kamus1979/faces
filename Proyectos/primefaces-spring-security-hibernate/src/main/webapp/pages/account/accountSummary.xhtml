@@ -9,8 +9,8 @@
 	<ui:define name="body">
 		<f:view>	
 			<h:form>
-				<p:commandButton value="Add Account" action="add"  />
 				
+				<p:commandButton id="add" value="Add Account" action="add"  immediate="true"  />
 				
 				<p:dataTable id="accountSummary" var="item" value="#{accountList.accounts}" paginator="true"
 						rows="10" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
