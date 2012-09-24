@@ -1,5 +1,8 @@
 package accounts.web;
 
+import javax.faces.context.FacesContext;
+import javax.faces.context.Flash;
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -9,45 +12,62 @@ import accounts.Account;
 import accounts.internal.service.AccountManager;
 
 /**
- * A Spring MVC @Controller controller handling requests for both the
- * account summary and the account details pages. The accountDetails()
- * method return an account, corresponding to a given entity id. The
- * accountSummary() method returns a list with all accounts.  
+ * A Spring MVC @Controller controller handling requests for both the account
+ * summary and the account details pages. The accountDetails() method return an
+ * account, corresponding to a given entity id. The accountSummary() method
+ * returns a list with all accounts.
  */
 @Component("accountForm")
 @Scope("request")
 public class AccountController extends BasePage {
 
-
-	@Autowired
 	private AccountManager accountManager;
 	private Account account = new Account();
 	private String id;
 
-	public String accountDetails(){
-		id = getParameter("id");
-		if(id != null){
-			account = accountManager.getAccount(new Long(id));
-		}		
-		return "success";
+	public AccountController(){
+		
 	}
 	
-	public String updateAccount(){
-		if(account.getEntityId() == null || 
-			StringUtils.isBlank(account.getEntityId().toString()) ||
-			account.getEntityId().toString().equalsIgnoreCase("0")){
-			
+	
+	@Autowired
+	public AccountController(AccountManager accountManager) {
+
+		this.accountManager = accountManager;
+		Flash flash = FacesContext.getCurrentInstance().  
+                getExternalContext().getFlash();  
+		//preserve messages across redirect  
+		flash.setKeepMessages(true);  
+		String id = (String) flash.get("id");
+		
+		if(id != null){
+			account = this.accountManager.getAccount(new Long(id));
+			this.setId(id);
+		}		
+	}
+
+	public String updateAccount() {
+		if (account.getEntityId() == null
+				|| StringUtils.isBlank(account.getEntityId().toString())
+				|| account.getEntityId().toString().equalsIgnoreCase("0")) {
+
 			account.setEntityId(null);
 		}
 		accountManager.update(account);
-		return "success";
+		return "accountSummary?faces-redirect=true";
 	}
-	
-	public String deleteAccount(){
+
+	public String deleteAccount() {
 		accountManager.delete(account.getEntityId());
-		return "success";
+		return "accountSummary?faces-redirect=true";
 	}
 	
+	
+	public String cancelAccount() {
+		
+		return "accountSummary?faces-redirect=true";
+	}	
+
 	public void setAccountManager(AccountManager accountManager) {
 		this.accountManager = accountManager;
 	}

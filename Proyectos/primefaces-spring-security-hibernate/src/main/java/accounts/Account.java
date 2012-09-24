@@ -135,6 +135,6 @@ public class Account extends Entity implements Serializable {
 	}
 	
 	public String toString() {
-		return "Number = '" + number + "', name = " + name + "', beneficiaries = " + beneficiaries;
+		return "Number = '" + number + "', name = " + name ;
 	}
 }
