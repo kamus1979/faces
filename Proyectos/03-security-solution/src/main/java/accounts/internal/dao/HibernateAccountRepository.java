@@ -69,7 +69,7 @@ public class HibernateAccountRepository extends HibernateDaoSupport
 		updateBeneficiaryAllocationPercentages(accountId, allocationPercentages);
 	}
 
-	@PreAuthorize("hasRole('ROLE_CUSTOMER')")
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public void delete(Long id) {
 		getHibernateTemplate().delete(getAccount(id));		
 	}

@@ -21,8 +21,10 @@
 				<h:outputText value="#{accountForm.account.entityId}" />
 				
 				<h:outputText value="Name: " />
-				<h:inputText id="name" value="#{accountForm.account.name}" maxlength="20">
-					<rich:ajaxValidator event="onkeyup"/>
+				<h:inputText id="name" value="#{accountForm.account.name}" 
+						required="true" requiredMessage="Name is required" 
+				>
+				
 				</h:inputText>
 				<rich:message for="name"/>
 				

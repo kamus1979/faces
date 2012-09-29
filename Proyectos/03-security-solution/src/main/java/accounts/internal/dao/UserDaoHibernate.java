@@ -17,7 +17,8 @@ import javax.persistence.Table;
 import java.util.List;
 
 @Repository("userDao")
-public class UserDaoHibernate extends HibernateDaoSupport implements UserDao, UserDetailsService {
+public class UserDaoHibernate extends HibernateDaoSupport 
+				implements UserDao, UserDetailsService {
 
     /**
      * Constructor that sets the entity to User.class.
