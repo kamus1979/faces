@@ -139,6 +139,14 @@ public class WizardBean implements java.io.Serializable {
 		this.drinkList = drinkList;
 	}
 
+	public String getComments() {
+		return comments;
+	}
+
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
 
 
 
