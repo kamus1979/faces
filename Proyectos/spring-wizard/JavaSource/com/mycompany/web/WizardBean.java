@@ -50,19 +50,19 @@ public class WizardBean implements java.io.Serializable {
     public void changeDrink(ValueChangeEvent event) {
         String newValue = (String) event.getNewValue();
        
-        if (newValue.equals("Brandy")) {drinkList = JSFUtils.createList(BRANDY); drink=BRANDY[0];}
-        else if (newValue.equals("Rum")) {drinkList = JSFUtils.createList(RUM); drink=RUM[0];}
-        else if (newValue.equals("Tequila")) {drinkList = JSFUtils.createList(TEQUILA);drink=TEQUILA[0];}
-        else if (newValue.equals("Whiskey")) {drinkList = JSFUtils.createList(WHISKEY);drink=WHISKEY[0];}
-        else if (newValue.equals("Wine")) {drinkList = JSFUtils.createList(WINE);drink=WINE[0];}
-        else if (newValue.equals("Beer")) {drinkList = JSFUtils.createList(BEER);drink=BEER[0];}
+        if (newValue.equals("Brandy")) {setDrinkList(JSFUtils.createList(BRANDY)); drink=BRANDY[0];}
+        else if (newValue.equals("Rum")) {setDrinkList(JSFUtils.createList(RUM)); drink=RUM[0];}
+        else if (newValue.equals("Tequila")) {setDrinkList(JSFUtils.createList(TEQUILA));drink=TEQUILA[0];}
+        else if (newValue.equals("Whiskey")) {setDrinkList(JSFUtils.createList(WHISKEY));drink=WHISKEY[0];}
+        else if (newValue.equals("Wine")) {setDrinkList(JSFUtils.createList(WINE));drink=WINE[0];}
+        else if (newValue.equals("Beer")) {setDrinkList(JSFUtils.createList(BEER));drink=BEER[0];}
     }
    
     @PostConstruct
     public void create() {
         drinkCategorySelected = CATEGORY[0];
-        drinkCategory = JSFUtils.createList(CATEGORY);
-        drinkList = JSFUtils.createList(BRANDY);
+        setDrinkCategory(JSFUtils.createList(CATEGORY));
+        setDrinkList(JSFUtils.createList(BRANDY));
         drink = BRANDY[0];
     }
     public void save() {
@@ -73,14 +73,74 @@ public class WizardBean implements java.io.Serializable {
                 .remove("wizardBean");
     }
 
+    //getters y setters
+    
+	public String getName() {
+		return name;
+	}
 
-	public void setStartPage(String startPage) {
-		this.startPage = startPage;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public OrderService getOrderService() {
+		return orderService;
 	}
 
 	public void setOrderService(OrderService orderService) {
 		this.orderService = orderService;
 	}
+
+	public String getStartPage() {
+		return startPage;
+	}
+
+	public void setStartPage(String startPage) {
+		this.startPage = startPage;
+	}
+
+	public String getDrinkCategorySelected() {
+		return drinkCategorySelected;
+	}
+
+	public void setDrinkCategorySelected(String drinkCategorySelected) {
+		this.drinkCategorySelected = drinkCategorySelected;
+	}
+
+	public List<SelectItem> getDrinkCategory() {
+		return drinkCategory;
+	}
+
+	public void setDrinkCategory(List<SelectItem> drinkCategory) {
+		this.drinkCategory = drinkCategory;
+	}
+
+	public String getDrink() {
+		return drink;
+	}
+
+	public void setDrink(String drink) {
+		this.drink = drink;
+	}
+
+	public List<SelectItem> getDrinkList() {
+		return drinkList;
+	}
+
+	public void setDrinkList(List<SelectItem> drinkList) {
+		this.drinkList = drinkList;
+	}
+
+
+
 
 	
 } 
