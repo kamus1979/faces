@@ -67,10 +67,20 @@ public class WizardBean implements java.io.Serializable {
     }
     public void save() {
         orderService.addOrder(name, email, drink, comments);
-        this.startPage = "/page1.xhtml";
+        this.setStartPage("/page1.xhtml");
 
         FacesContext.getCurrentInstance().getExternalContext().getRequestMap()
                 .remove("wizardBean");
     }
 
+
+	public void setStartPage(String startPage) {
+		this.startPage = startPage;
+	}
+
+	public void setOrderService(OrderService orderService) {
+		this.orderService = orderService;
+	}
+
+	
 } 
