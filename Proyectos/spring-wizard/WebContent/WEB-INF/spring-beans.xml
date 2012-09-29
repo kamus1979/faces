@@ -17,4 +17,11 @@
 		</property>
 	</bean>
 
+	<bean id="wizardBean" class="com.mycompany.web.WizardBean" scope="request">
+		<property name="startPage" value="/page1.xhtml" />
+		<property name="orderService">
+			<ref bean="service" />
+		</property>
+	</bean>
+
 </beans>
