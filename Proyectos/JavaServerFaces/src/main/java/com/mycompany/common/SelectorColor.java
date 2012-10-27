@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean
 public class SelectorColor implements Serializable {
 
 	/**
