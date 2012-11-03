@@ -45,10 +45,10 @@ Other names may be trademarks of their respective owners.
       xmlns:f="http://java.sun.com/jsf/core">
 
     <ui:composition template="template.xhtml">
-        <f:metadata>
+        <!--  f:metadata>
             <f:viewParam name="skin" value="#{skinUrlManager.skin}" />
             <f:event type="preRenderView" listener="#{skinUrlManager.update}" />
-        </f:metadata>
+        </f:metadata> -->
         <ui:insert name="pageTitle">
             <h:outputText value="#{i18n['template.title']}"></h:outputText>
         </ui:insert>    
