@@ -3,7 +3,6 @@
 
 package com.mycompany.jsf;
 
-import com.mycompany.jsf.OrganoBean;
 import java.io.Serializable;
 
 privileged aspect OrganoBean_Roo_Serializable {

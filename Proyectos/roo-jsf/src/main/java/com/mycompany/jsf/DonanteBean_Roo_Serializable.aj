@@ -3,7 +3,6 @@
 
 package com.mycompany.jsf;
 
-import com.mycompany.jsf.DonanteBean;
 import java.io.Serializable;
 
 privileged aspect DonanteBean_Roo_Serializable {

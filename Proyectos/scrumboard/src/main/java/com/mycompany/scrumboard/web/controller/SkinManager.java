@@ -7,6 +7,7 @@ import javax.faces.bean.ManagedProperty;
 @ManagedBean(name = "skinManager")
 public class SkinManager {
 
+	
 	private String selectedSkin;
 	@ManagedProperty(value = "#{skinValuesManager}")
 	private SkinValuesManager skinValuesManager;

@@ -3,14 +3,18 @@
 
 package com.mycompany.domain;
 
-import com.mycompany.domain.Organo;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import java.lang.String;
 
 privileged aspect Organo_Roo_ToString {
     
     public String Organo.toString() {
-        return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Descripcion: ").append(getDescripcion()).append(", ");
+        sb.append("Donante: ").append(getDonante()).append(", ");
+        sb.append("MejorAntesDe: ").append(getMejorAntesDe()).append(", ");
+        sb.append("Nombre: ").append(getNombre()).append(", ");
+        sb.append("Precio: ").append(getPrecio());
+        return sb.toString();
     }
     
 }

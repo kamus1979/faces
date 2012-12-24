@@ -15,6 +15,7 @@ import javax.faces.bean.ManagedBean;
 @ApplicationScoped
 public class SkinValuesManager implements Serializable {
 
+	
 	/**
 	 * 
 	 */

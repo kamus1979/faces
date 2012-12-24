@@ -52,6 +52,7 @@ import javax.faces.context.FacesContext;
  * Resolver to #{taskScope} expression.
  * @author eder
  */
+
 public class TaskScopeResolver extends ELResolver {
 
     private static final String SCOPE_NAME = "taskScope";

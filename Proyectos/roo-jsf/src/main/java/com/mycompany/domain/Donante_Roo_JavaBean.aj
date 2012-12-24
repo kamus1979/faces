@@ -3,9 +3,9 @@
 
 package com.mycompany.domain;
 
-import com.mycompany.domain.Donante;
 import com.mycompany.domain.Organo;
 import com.mycompany.domain.TipoSangre;
+import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 

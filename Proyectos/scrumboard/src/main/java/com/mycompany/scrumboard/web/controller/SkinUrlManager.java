@@ -8,6 +8,7 @@ import javax.faces.bean.ManagedProperty;
 @ManagedBean(name = "skinUrlManager")
 public class SkinUrlManager implements Serializable {
 
+	
 	/**
 	 * 
 	 */

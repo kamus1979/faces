@@ -3,14 +3,18 @@
 
 package com.mycompany.domain;
 
-import com.mycompany.domain.Donante;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
+import java.lang.String;
 
 privileged aspect Donante_Roo_ToString {
     
     public String Donante.toString() {
-        return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Email: ").append(getEmail()).append(", ");
+        sb.append("FechaNacimiento: ").append(getFechaNacimiento()).append(", ");
+        sb.append("Nombre: ").append(getNombre()).append(", ");
+        sb.append("Organos: ").append(getOrganos() == null ? "null" : getOrganos().size()).append(", ");
+        sb.append("TipoSangre: ").append(getTipoSangre());
+        return sb.toString();
     }
     
 }

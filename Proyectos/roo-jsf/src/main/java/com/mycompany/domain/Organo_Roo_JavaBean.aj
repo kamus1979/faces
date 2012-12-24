@@ -4,7 +4,8 @@
 package com.mycompany.domain;
 
 import com.mycompany.domain.Donante;
-import com.mycompany.domain.Organo;
+import java.lang.Integer;
+import java.lang.String;
 import java.util.Date;
 
 privileged aspect Organo_Roo_JavaBean {
