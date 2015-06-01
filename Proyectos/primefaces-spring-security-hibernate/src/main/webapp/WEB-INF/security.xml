@@ -6,13 +6,12 @@
 
 	<global-method-security pre-post-annotations="enabled"/>
 
-	<http use-expressions="true" access-denied-page="/pages/static/accessDenied.jsf">
+	<http use-expressions="true" access-denied-page="/pages/accessDenied.jsf">
 		<intercept-url pattern="/login.jsf" filters="none" />
-		<intercept-url pattern="/pages/template/**" access="isAuthenticated()" />
 		<intercept-url pattern="/pages/account/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
 		<intercept-url pattern="/pages/admin/**" access="hasRole('ROLE_ADMIN')" />
 		<form-login login-page="/login.jsf" 
-			default-target-url="/pages/template/welcome.jsf"
+			default-target-url="/pages/welcome.jsf"
 			authentication-failure-url="/login.jsf?state=failure" />
 		<logout logout-success-url="/login.jsf?state=logout" />
 	</http>
